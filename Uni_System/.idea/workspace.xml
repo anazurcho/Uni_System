@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61222e93-f3e0-4d1b-b7c9-8b2c014437a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/course/course.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/course/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lecture/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lecture/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lecture/lecture.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/673428b0-bec2-4cdb-8b2a-0aa9d8f7ce1b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/673428b0-bec2-4cdb-8b2a-0aa9d8f7ce1b.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/about.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/course/my_courses.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/OwnAdminUserMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/OwnAdminUserMiddleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_26_230959_create_courses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_230959_create_courses_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_26_231037_create_lectures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_231037_create_lectures_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +148,7 @@
     <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../uni/PHP_HW/Blog" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -162,6 +160,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/layout" />
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
@@ -181,6 +181,7 @@
       <updated>1608830176733</updated>
       <workItem from="1608830177902" duration="11669000" />
       <workItem from="1608997637791" duration="8866000" />
+      <workItem from="1609035801039" duration="1916000" />
     </task>
     <servers />
   </component>
@@ -196,10 +197,14 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="693" y="271" width="528" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1608840635275" />
-    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609029813146">
+    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609036866358">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
-    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609029813146" />
+    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609036866358" />
+    <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl" timestamp="1609036667238">
+      <screen x="0" y="0" width="1920" height="1048" />
+    </state>
+    <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609036667238" />
     <state x="644" y="213" width="631" height="624" key="find.popup" timestamp="1608832512894">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>

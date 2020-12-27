@@ -6,6 +6,7 @@
             <thead class="thead-dark">
             <tr>
                 <th scope="col">user</th>
+                <th scope="col">course</th>
                 <th scope="col">lecture</th>
                 <th scope="col">total score</th>
             </tr>
@@ -14,6 +15,7 @@
             @foreach($student_shells as $student_shell)
                 <tr>
                     <td>{{$student_shell->user->name}}</td>
+                    <td>{{$student_shell->lecture->course->name}}</td>
                     <td>{{$student_shell->lecture->name}}</td>
                     <td>{{$student_shell->total_score}}</td>
                 </tr>

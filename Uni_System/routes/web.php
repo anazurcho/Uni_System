@@ -39,6 +39,15 @@ Route::get('/users/{user}/password_edit', [UserController::class, 'password_edit
 Route::put('/users/{user}/password_update', [UserController::class, 'password_update'])->name('password_update')->middleware('edit.password');
 
 Route::get('/lectures', [LectureController::class, 'index'])->name('all_lectures')->middleware('auth');
+
 Route::get('/courses', [CourseController::class, 'index'])->name('all_courses')->middleware('auth');
+Route::get('/my_courses', [CourseController::class, 'my_courses'])->name('my_courses')->middleware('auth');
+Route::get('/courses/create', [CourseController::class, 'create'])->name('create.course')->middleware('auth');
+Route::post('/courses/save', [CourseController::class, 'save'])->name('save.course')->middleware('auth');
+
 Route::get('/student_shells', [StudentShellController::class, 'index'])->name('all_student_shells')->middleware('auth');
 Route::get('/my_student_shells', [StudentShellController::class, 'my_student_shells'])->name('my_student_shells')->middleware('auth');
+
+Route::get('/about',function () { return view('about');})->name('about');
+
+Route::get('/login',function () { return view('user.login');})->name('login');

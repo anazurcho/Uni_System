@@ -16,7 +16,7 @@
                         <button type="submit" class="btn btn-primary">Register</button>
                     </div>
                 </div>
-                <a class="nav-link" href="{{ route('login') }}">Back To Login</a>
+                <a class="nav-link" href="{{ route('welcome') }}">Back To Login</a>
             </div>
         </form>
     </div>

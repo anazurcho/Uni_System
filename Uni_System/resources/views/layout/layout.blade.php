@@ -8,7 +8,7 @@
     <link href="https://bootswatch.com/4/flatly/bootstrap.min.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="{{route('about')}}">About</a>
                 </li>
             </ul>
             <ul class="my-2 my-lg-0 navbar-nav">
@@ -44,47 +44,50 @@
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </li>
-
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{route('my_profile')}}">My Profile</a>
                 <hr/>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('my_student_shells')}}">My Student Shells</a>
-                <hr/>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">My Courses</a>
-                <hr/>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">My Scores</a>
-                <hr/>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('all_courses')}}">Courses</a>
-                <hr/>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Schedule</a>
-                <hr/>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('all_lectures')}}">Lecturers</a>
-                <hr/>
-            </li>
-            {{--            if admin show--}}
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('all_users')}}">Users</a>
-                <hr/>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('all_student_shells')}}">Student Shells</a>
-                <hr/>
-            </li>
+{{--            @can("student", Auth::user()->id)--}}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('my_student_shells')}}">My Student Shells</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('my_courses')}}">My Courses</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">My Scores</a>
+                    <hr/>
+                </li>
+{{--            @endcan--}}
+            @can("admin", Auth::user()->id)
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('all_courses')}}">Courses</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Schedule</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('all_lectures')}}">Lecturers</a>
+                    <hr/>
+                </li>
+                {{--            if admin show--}}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('all_users')}}">Users</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{{route('all_student_shells')}}">Student Shells</a>
+                    <hr/>
+                </li>
+            @endcan
             {{--            --}}
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">About</a>
+                <a class="nav-link" href="{{route('about')}}">About</a>
                 <hr/>
             </li>
         </ul>
