@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">UNI-SYS</a>/
+    <a class="navbar-brand" href="{{route('my_profile')}}">UNI-SYS</a>/
     @if (Auth::user())
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
@@ -50,6 +50,10 @@
                 <hr/>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-white" href="{{route('my_student_shells')}}">My Student Shells</a>
+                <hr/>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-white" href="#">My Courses</a>
                 <hr/>
             </li>
@@ -58,7 +62,7 @@
                 <hr/>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Courses</a>
+                <a class="nav-link text-white" href="{{route('all_courses')}}">Courses</a>
                 <hr/>
             </li>
             <li class="nav-item">
@@ -66,12 +70,16 @@
                 <hr/>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">Lecturers</a>
+                <a class="nav-link text-white" href="{{route('all_lectures')}}">Lecturers</a>
                 <hr/>
             </li>
             {{--            if admin show--}}
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{route('all_users')}}">Users</a>
+                <hr/>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{route('all_student_shells')}}">Student Shells</a>
                 <hr/>
             </li>
             {{--            --}}

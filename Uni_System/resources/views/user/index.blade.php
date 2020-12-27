@@ -9,7 +9,10 @@
                 <th scope="col">USERNAME</th>
                 <th scope="col">Email</th>
                 <th scope="col">Status</th>
-                <th scope="col">edit</th>
+                @can('admin', \Illuminate\Support\Facades\Auth::user())
+                    <th scope="col">edit</th>
+                    <th scope="col">Change Password</th>
+                @endcan
             </tr>
             </thead>
             <tbody>
@@ -19,13 +22,22 @@
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->status}}</td>
-                    <td>
-                        <button type="button" class="btn btn-info">
-                            <a class=" text-white" href="{{route('users.edit', $user->id)}}">
-                                edit
-                            </a>
-                        </button>
-                    </td>
+                    @can('admin', \Illuminate\Support\Facades\Auth::user())
+                        <td>
+                            <button type="button" class="btn btn-info">
+                                <a class=" text-white" href="{{route('users.edit', $user->id)}}">
+                                    edit
+                                </a>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-info">
+                                <a class=" text-white" href="{{route('password_edit', $user->id)}}">
+                                    Change Password
+                                </a>
+                            </button>
+                        </td>
+                    @endcan
                 </tr>
             @endforeach
             </tbody>
