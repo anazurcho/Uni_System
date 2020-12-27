@@ -44,4 +44,7 @@ class User extends Authenticatable
     public function student_shell(){
         return $this->hasMany(StudentShell::class);
     }
+    public function lecturer(){
+        return $this->hasMany(Lecture::class);
+    }
 }

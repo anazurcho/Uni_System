@@ -17,11 +17,12 @@ class CreateStudentShellsTable extends Migration
             $table->id();
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('lecture_id');
+            $table->unique(array('user_id', 'lecture_id'));
             $table->float('total_score');
             $table->timestamps();
         });
     }
-
+//$table->unique(array('user_id', 'lecture_id'));
     /**
      * Reverse the migrations.
      *

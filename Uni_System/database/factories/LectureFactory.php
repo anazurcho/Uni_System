@@ -4,7 +4,9 @@ namespace Database\Factories;
 
 use App\Models\Course;
 use App\Models\Lecture;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class LectureFactory extends Factory
 {
@@ -22,9 +24,10 @@ class LectureFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'name' => $this ->faker->name,
-            'course_id' => self::factoryForModel(Course::class)
-        ];
+        return array(
+            'name' => $this->faker->name,
+            'course_id' => self::factoryForModel(Course::class),
+            'lecturer_id' =>  self::factoryForModel(User::class)
+        );
     }
 }

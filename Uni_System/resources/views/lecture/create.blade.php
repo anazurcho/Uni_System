@@ -2,23 +2,17 @@
 @section("content")
     <body>
     <div class="container marg-3">
-        <form method="post" enctype="multipart/form-data" action="{{route('update.lecture', $lecture->id)}}">
-            @csrf
-            @method("PUT")
+        <form method="post" enctype="multipart/form-data" action="{{route('save.lecture')}}">
             <div class="box-body">
                 <div class="form-group">
                     <label for="name">lecture Name</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="name"
-                           value="{{old('name', $lecture->name)}}" name="name"/>
+                           name="name"/>
                     <div>
                         <label for="course_id">Course Name</label>
                         <select name="course_id">
                             @foreach($courses as $course)
-                                @if (old('course_id', $course->course_id) == $course->id))
-                                <option value="{{ $course->id }}" selected>{{ $course->name }}</option>
-                                @else
-                                    <option value="{{ $course->id }}">{{ $course->name }}</option>
-                                @endif
+                                <option value="{{ $course->id }}">{{ $course->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -26,15 +20,10 @@
                         <label for="lecturer_id">lecturer Name</label>
                         <select name="lecturer_id">
                             @foreach($lecturers as $lecturer)
-                                @if (old('lecturer_id', $lecture->lecturer_id) ==$lecturer->id))
-                                <option value="{{ $lecturer->id }}" selected>{{ $lecturer->name }}</option>
-                                @else
-                                    <option value="{{ $lecturer->id }}">{{ $lecturer->name }}</option>
-                                @endif
+                                <option value="{{ $lecturer->id }}">{{ $lecturer->name }}</option>
                             @endforeach
                         </select>
                     </div>
-
                 </div>
             </div>
             <input type="hidden" name="_token" id='csrf_toKen' value="{{ csrf_toKen() }}">

@@ -39,14 +39,26 @@ Route::get('/users/{user}/password_edit', [UserController::class, 'password_edit
 Route::put('/users/{user}/password_update', [UserController::class, 'password_update'])->name('password_update')->middleware('edit.password');
 
 Route::get('/lectures', [LectureController::class, 'index'])->name('all_lectures')->middleware('auth');
+Route::get('/lectures/create', [LectureController::class, 'create'])->name('create.lecture')->middleware('auth');
+Route::post('/lectures/save', [LectureController::class, 'save'])->name('save.lecture')->middleware('auth');
+Route::get('/lectures/{lecture}/edit', [LectureController::class, 'edit'])->name('edit.lecture')->middleware('auth');
+Route::put('/lectures/{lecture}/update', [LectureController::class, 'update'])->name('update.lecture')->middleware('auth');
+Route::delete('/lectures/{lecture}/delete', [LectureController::class, 'delete'])->name('delete.lecture')->middleware('auth');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('all_courses')->middleware('auth');
 Route::get('/my_courses', [CourseController::class, 'my_courses'])->name('my_courses')->middleware('auth');
+Route::get('/courses/{course}/', [CourseController::class, 'course'])->name('course')->middleware('auth');
 Route::get('/courses/create', [CourseController::class, 'create'])->name('create.course')->middleware('auth');
 Route::post('/courses/save', [CourseController::class, 'save'])->name('save.course')->middleware('auth');
+Route::get('/courses/{course}/edit', [CourseController::class, 'edit'])->name('edit.course')->middleware('auth');
+Route::put('/courses/{course}/update', [CourseController::class, 'update'])->name('update.course')->middleware('auth');
+Route::delete('/courses/{course}/delete', [CourseController::class, 'delete'])->name('delete.course')->middleware('auth');
 
 Route::get('/student_shells', [StudentShellController::class, 'index'])->name('all_student_shells')->middleware('auth');
 Route::get('/my_student_shells', [StudentShellController::class, 'my_student_shells'])->name('my_student_shells')->middleware('auth');
+Route::get('/student_shells/create', [StudentShellController::class, 'create'])->name('create.student_shell')->middleware('auth');
+Route::post('/student_shells/save', [StudentShellController::class, 'save'])->name('save.student_shell')->middleware('auth');
+Route::post('/student_shells/choose', [StudentShellController::class, 'choose'])->name('choose.student_shell')->middleware('auth');
 
 Route::get('/about',function () { return view('about');})->name('about');
 

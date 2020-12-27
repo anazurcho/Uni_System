@@ -30,6 +30,12 @@ class CourseController extends Controller
         $course->save();
         return redirect()->action([CourseController::class, 'index']);
     }
+    public function course(Course $course)
+    {
+        $lectures = $course->lectures()->paginate(5);
+        return view("course/course", compact('course', 'lectures'));
+    }
+
     public function edit(Course $course)
     {
         return view("course/edit", compact('course'));
