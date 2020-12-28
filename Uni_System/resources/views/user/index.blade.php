@@ -9,7 +9,7 @@
                 <th scope="col">USERNAME</th>
                 <th scope="col">Email</th>
                 <th scope="col">Status</th>
-                @can('admin', \Illuminate\Support\Facades\Auth::user())
+                @can('admin')
                     <th scope="col">edit</th>
                     <th scope="col">Change Password</th>
                 @endcan
@@ -22,7 +22,7 @@
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->status}}</td>
-                    @can('admin', \Illuminate\Support\Facades\Auth::user())
+                    @can('admin')
                         <td>
                             <button type="button" class="btn btn-info">
                                 <a class=" text-white" href="{{route('users.edit', $user->id)}}">

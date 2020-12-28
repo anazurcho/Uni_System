@@ -27,6 +27,10 @@ class UserController extends Controller
     {
         return view('user.my_profile');
     }
+    public function open(User $user)
+    {
+        return view('user.user', compact('user'));
+    }
     public function register()
     {
         return view('user.register');

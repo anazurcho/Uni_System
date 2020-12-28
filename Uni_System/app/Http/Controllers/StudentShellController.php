@@ -45,7 +45,7 @@ class StudentShellController extends Controller
     {
         $student_shell->total_score += abs(intval($request->total_score));
         $student_shell->save();
-        return redirect()->action([StudentShellController::class, 'index']);
+        return redirect()->back();
     }
 
 }

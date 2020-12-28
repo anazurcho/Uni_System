@@ -63,7 +63,6 @@
                             <td>{{$course->lecture->course->name}}</td>
                             <td>{{$course->lecture->name}}</td>
                             <td>{{$course->total_score}}</td>
-
                         </tr>
                     @endforeach
                     </tbody>

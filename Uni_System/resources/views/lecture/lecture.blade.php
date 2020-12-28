@@ -64,6 +64,7 @@
                 <th scope="col">lecturer</th>
                 <th scope="col">score</th>
                 <th scope="col">Change Score</th>
+                <th scope="col">see</th>
             </tr>
             </thead>
             <tbody>
@@ -83,6 +84,13 @@
                                    name="total_score">
                             <button class="btn btn-secondary mr-sm-1 col-md-4" type="submit">+ Score</button>
                         </form>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-info">
+                            <a class=" text-white" href="{{route('open.user', $student_shell->user->id)}}">
+                                see
+                            </a>
+                        </button>
                     </td>
                 </tr>
             @endforeach

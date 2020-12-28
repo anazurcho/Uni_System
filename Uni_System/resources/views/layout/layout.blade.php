@@ -68,7 +68,7 @@
                     <hr/>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('all_lectures')}}">Lecturers</a>
+                    <a class="nav-link text-white" href="{{route('all_lectures')}}">Lectures</a>
                     <hr/>
                 </li>
                 {{--            if admin show--}}

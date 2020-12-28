@@ -34,6 +34,7 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 Route::get('/users', [UserController::class, 'index'])->name('all_users')->middleware('auth');
 Route::get('/users/my_profile', [UserController::class, 'my_profile'])->name('my_profile')->middleware('auth');
+Route::get('/users/{user}', [UserController::class, 'open'])->name('open.user')->middleware('auth');
 Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.edit')->middleware('edit.password');
 Route::put('/users/{user}/update', [UserController::class, 'update'])->name('users.update')->middleware('edit.password');
 Route::get('/users/{user}/password_edit', [UserController::class, 'password_edit'])->name('password_edit')->middleware('edit.password');

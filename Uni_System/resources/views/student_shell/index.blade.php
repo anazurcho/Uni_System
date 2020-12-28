@@ -30,7 +30,7 @@
                     <td>{{$student_shell->user->name}}</td>
                     <td>{{$student_shell->lecture->course->name}}</td>
                     <td>{{$student_shell->lecture->name}}</td>
-                    <td>{{$student_shell->lecture->lecturer->name}}</td>
+                    <td>{{$student_shell->lecture->user->name}}</td>
                     <td>{{$student_shell->total_score}}</td>
                     @can('lecturer', Auth::user())
                         <td>
