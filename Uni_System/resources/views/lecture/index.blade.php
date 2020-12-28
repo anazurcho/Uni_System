@@ -28,7 +28,8 @@
                     <th scope="row">{{$lecture->id}}</th>
                     <td>{{$lecture->course->name}}</td>
                     <td>{{$lecture->name}}</td>
-                    <td>{{$lecture->lecturer->name}}</td>
+{{--                    <td>{{$lecture->lecturer->name}}</td>--}}
+                    <td>{{$lecture->name}}</td>
                     <td>
                         <button type="button" class="btn btn-info">
                             <a class="text-white" href="{{route('edit.lecture', $lecture->id)}}">

@@ -17,8 +17,8 @@
                         </select>
                     </div>
                     <div class="marg-4">
-                        <label for="lecturer_id">lecturer Name</label>
-                        <select name="lecturer_id">
+                        <label for="user_id">lecturer Name</label>
+                        <select name="user_id">
                             @foreach($lecturers as $lecturer)
                                 <option value="{{ $lecturer->id }}">{{ $lecturer->name }}</option>
                             @endforeach

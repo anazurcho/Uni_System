@@ -48,16 +48,16 @@
                 <a class="nav-link text-white" href="{{route('my_profile')}}">My Profile</a>
                 <hr/>
             </li>
-{{--            @can("student", Auth::user()->id)--}}
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{route('my_courses')}}">My Courses</a>
+                <hr/>
+            </li>
+            @can("student", Auth::user()->id)
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('my_student_shells')}}">My Student Shells</a>
                     <hr/>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="{{route('my_courses')}}">My Courses</a>
-                    <hr/>
-                </li>
-{{--            @endcan--}}
+            @endcan
             @can("admin", Auth::user()->id)
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('all_courses')}}">Courses</a>

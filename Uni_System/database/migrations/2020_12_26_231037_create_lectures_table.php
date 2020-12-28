@@ -17,8 +17,8 @@ class CreateLecturesTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->unsignedInteger('course_id');
-            $table->unsignedInteger('lecturer_id');
-            $table->unique(array('course_id', 'lecturer_id'));
+            $table->unsignedInteger('user_id');
+            $table->unique(array('course_id', 'user_id'));
             $table->timestamps();
         });
     }

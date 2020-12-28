@@ -58,7 +58,12 @@ class UserController extends Controller
 //        $user->update($request->all());
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->status = $request->status;
+        if ($request->status){
+            $user->status = $request->status;
+        }else{
+            $user->status = $user->status;
+        }
+
         $user->save();
         return redirect()->route('my_profile');
     }

@@ -2,27 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61222e93-f3e0-4d1b-b7c9-8b2c014437a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/schedule/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/schedule/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fb7f7ecb-be5b-480c-bf9a-e70f39c5fca2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fb7f7ecb-be5b-480c-bf9a-e70f39c5fca2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CourseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LectureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LectureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentShellController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentShellController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Lecture.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Lecture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/LectureFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/LectureFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_26_231037_create_lectures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_26_231037_create_lectures_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/my_courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/my_courses.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lecture/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lecture/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lecture/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lecture/lecture.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/lecture.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +186,7 @@
       <workItem from="1608997637791" duration="8866000" />
       <workItem from="1609035801039" duration="1916000" />
       <workItem from="1609076224859" duration="1001000" />
-      <workItem from="1609079135868" duration="39806000" />
+      <workItem from="1609079135868" duration="49557000" />
     </task>
     <servers />
   </component>
@@ -212,14 +206,18 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="693" y="271" width="528" height="507" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1608840635275" />
-    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609166403843">
+    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609183353223">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
-    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609166403843" />
+    <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609183353223" />
     <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl" timestamp="1609077480218">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609077480218" />
+    <state x="609" y="147" width="696" height="755" key="VCS.ChangeListViewerDialog" timestamp="1609180430397">
+      <screen x="0" y="0" width="1920" height="1048" />
+    </state>
+    <state x="609" y="147" width="696" height="755" key="VCS.ChangeListViewerDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609180430397" />
     <state x="845" y="412" width="409" height="271" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1609165279518">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
@@ -228,18 +226,18 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="543" y="183" width="828" height="684" key="com.intellij.database.dbimport.ImportDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609084824585" />
-    <state x="644" y="213" width="631" height="624" key="find.popup" timestamp="1608832512894">
+    <state x="644" y="213" width="631" height="624" key="find.popup" timestamp="1609183548653">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
-    <state x="644" y="213" width="631" height="624" key="find.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1608832512894" />
+    <state x="644" y="213" width="631" height="624" key="find.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609183548653" />
     <state x="665" y="290" width="584" height="470" key="refactoring.ChangeSignatureDialog" timestamp="1609083493395">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="665" y="290" width="584" height="470" key="refactoring.ChangeSignatureDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609083493395" />
-    <state x="622" y="239" key="run.anything.popup" timestamp="1609109309179">
+    <state x="622" y="239" key="run.anything.popup" timestamp="1609186440801">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
-    <state x="622" y="239" key="run.anything.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609109309179" />
+    <state x="622" y="239" key="run.anything.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609186440801" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1608835914930">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>

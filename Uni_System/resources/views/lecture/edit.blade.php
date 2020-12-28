@@ -23,10 +23,10 @@
                         </select>
                     </div>
                     <div class="marg-4">
-                        <label for="lecturer_id">lecturer Name</label>
-                        <select name="lecturer_id">
+                        <label for="user_id">lecturer Name</label>
+                        <select name="user_id">
                             @foreach($lecturers as $lecturer)
-                                @if (old('lecturer_id', $lecture->lecturer_id) ==$lecturer->id))
+                                @if (old('user_id', $lecture->user_id) ==$lecturer->id))
                                 <option value="{{ $lecturer->id }}" selected>{{ $lecturer->name }}</option>
                                 @else
                                     <option value="{{ $lecturer->id }}">{{ $lecturer->name }}</option>

@@ -11,15 +11,16 @@ class Lecture extends Model
     protected $fillable = [
         'name',
         'course_id',
-        'lecturer_id',
+        'user_id',
     ];
 
     public function course(){
         return $this->belongsTo(Course::class);
     }
-    public function lecturer(){
+    public function user(){
         return $this->belongsTo(User::class);
     }
+//    public function student_shells(){
     public function student_shell(){
         return $this->hasMany(StudentShell::class);
     }

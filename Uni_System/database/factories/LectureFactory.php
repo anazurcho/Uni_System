@@ -27,7 +27,7 @@ class LectureFactory extends Factory
         return array(
             'name' => $this->faker->name,
             'course_id' => self::factoryForModel(Course::class),
-            'lecturer_id' =>  self::factoryForModel(User::class)
+            'user_id' =>  self::factoryForModel(User::class)
         );
     }
 }

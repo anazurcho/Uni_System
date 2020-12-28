@@ -43,13 +43,13 @@ Route::get('/lectures', [LectureController::class, 'index'])->name('all_lectures
 Route::get('/lectures/create', [LectureController::class, 'create'])->name('create.lecture')->middleware('auth');
 Route::post('/lectures/save', [LectureController::class, 'save'])->name('save.lecture')->middleware('auth');
 Route::get('/lectures/{lecture}/edit', [LectureController::class, 'edit'])->name('edit.lecture')->middleware('auth');
-Route::get('/lectures/{lecture}/open', [LectureController::class, 'open'])->name('open.lecture')->middleware('auth');
+Route::get('/lectures/{lecture}', [LectureController::class, 'open'])->name('open.lecture')->middleware('auth');
 Route::put('/lectures/{lecture}/update', [LectureController::class, 'update'])->name('update.lecture')->middleware('auth');
 Route::delete('/lectures/{lecture}/delete', [LectureController::class, 'delete'])->name('delete.lecture')->middleware('auth');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('all_courses')->middleware('auth');
 Route::get('/my_courses', [CourseController::class, 'my_courses'])->name('my_courses')->middleware('auth');
-Route::get('/courses/{course}/', [CourseController::class, 'course'])->name('course')->middleware('auth');
+Route::get('/courses/{course}', [CourseController::class, 'course'])->name('course')->middleware('auth');
 Route::get('/course/create', [CourseController::class, 'create'])->name('course.create')->middleware('auth');
 Route::post('/courses/save', [CourseController::class, 'save'])->name('save.course')->middleware('auth');
 Route::get('/courses/{course}/edit', [CourseController::class, 'edit'])->name('edit.course')->middleware('auth');

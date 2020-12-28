@@ -11,10 +11,12 @@
                     <input type="text" class="form-control" name="name" value="{{old('name', $user->name)}}">
                     <label>Email</label>
                     <input type="text" class="form-control" name="email" value="{{old('email', $user->email)}}">
-{{--                    <label>Password</label>--}}
-{{--                    <input type="text" class="form-control" name="password" value="{{old('password', $user->password)}}">--}}
-                    <label>status</label>
-                    <input type="text" class="form-control" name="status" value="{{old('status', $user->status)}}">
+                    {{--                    <label>Password</label>--}}
+                    {{--                    <input type="text" class="form-control" name="password" value="{{old('password', $user->password)}}">--}}
+                    @can('admin', Auth::user()->id)
+                        <label>status</label>
+                        <input type="text" class="form-control" name="status" value="{{old('status', $user->status)}}">
+                    @endcan
                     <input type="hidden" name="_token" id='csrf_toKen' value="{{ csrf_toKen() }}">
                     <div class="box-footer marg_1">
                         <button type="submit" class="btn btn-primary">Save</button>
