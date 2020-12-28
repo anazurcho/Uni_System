@@ -23,4 +23,7 @@ class Lecture extends Model
     public function student_shell(){
         return $this->hasMany(StudentShell::class);
     }
+    public function schedules(){
+        return $this->hasMany(Schedule::class);
+    }
 }

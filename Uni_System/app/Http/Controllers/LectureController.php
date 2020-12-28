@@ -12,7 +12,7 @@ class LectureController extends Controller
     //
     public function index()
     {
-        $lectures = Lecture::paginate(15);
+        $lectures = Lecture::paginate(10);
         return view('lecture/index', compact('lectures'));
     }
     public function create()
@@ -34,7 +34,10 @@ class LectureController extends Controller
         $courses =  Course::all();
         return view("lecture/edit", compact('lecture', 'lecturers', 'courses'));
     }
-
+    public function open(Lecture $lecture)
+    {
+        return view("lecture/lecture", compact('lecture'));
+    }
     public function update(Request $request, Lecture $lecture)
     {
         $lecture->update($request->all());

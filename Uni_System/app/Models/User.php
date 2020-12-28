@@ -41,7 +41,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function student_shell(){
+    public function student_shells(){
         return $this->hasMany(StudentShell::class);
     }
     public function lecturer(){

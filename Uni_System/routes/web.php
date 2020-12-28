@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LectureController;
 use App\Http\Controllers\CourseController;
@@ -42,13 +43,14 @@ Route::get('/lectures', [LectureController::class, 'index'])->name('all_lectures
 Route::get('/lectures/create', [LectureController::class, 'create'])->name('create.lecture')->middleware('auth');
 Route::post('/lectures/save', [LectureController::class, 'save'])->name('save.lecture')->middleware('auth');
 Route::get('/lectures/{lecture}/edit', [LectureController::class, 'edit'])->name('edit.lecture')->middleware('auth');
+Route::get('/lectures/{lecture}/open', [LectureController::class, 'open'])->name('open.lecture')->middleware('auth');
 Route::put('/lectures/{lecture}/update', [LectureController::class, 'update'])->name('update.lecture')->middleware('auth');
 Route::delete('/lectures/{lecture}/delete', [LectureController::class, 'delete'])->name('delete.lecture')->middleware('auth');
 
 Route::get('/courses', [CourseController::class, 'index'])->name('all_courses')->middleware('auth');
 Route::get('/my_courses', [CourseController::class, 'my_courses'])->name('my_courses')->middleware('auth');
 Route::get('/courses/{course}/', [CourseController::class, 'course'])->name('course')->middleware('auth');
-Route::get('/courses/create', [CourseController::class, 'create'])->name('create.course')->middleware('auth');
+Route::get('/course/create', [CourseController::class, 'create'])->name('course.create')->middleware('auth');
 Route::post('/courses/save', [CourseController::class, 'save'])->name('save.course')->middleware('auth');
 Route::get('/courses/{course}/edit', [CourseController::class, 'edit'])->name('edit.course')->middleware('auth');
 Route::put('/courses/{course}/update', [CourseController::class, 'update'])->name('update.course')->middleware('auth');
@@ -59,7 +61,12 @@ Route::get('/my_student_shells', [StudentShellController::class, 'my_student_she
 Route::get('/student_shells/create', [StudentShellController::class, 'create'])->name('create.student_shell')->middleware('auth');
 Route::post('/student_shells/save', [StudentShellController::class, 'save'])->name('save.student_shell')->middleware('auth');
 Route::post('/student_shells/choose', [StudentShellController::class, 'choose'])->name('choose.student_shell')->middleware('auth');
+Route::put('/student_shells/{student_shell}/change_score', [StudentShellController::class, 'change_score'])->name('change_score.student_shell')->middleware('auth');
 
-Route::get('/about',function () { return view('about');})->name('about');
+Route::get('/schedules', [ScheduleController::class, 'index'])->name('all_schedules')->middleware('auth');
+Route::get('/schedules/create', [ScheduleController::class, 'create'])->name('create.schedule')->middleware('auth');
+Route::post('/schedules/save', [ScheduleController::class, 'save'])->name('save.schedule')->middleware('auth');
 
-Route::get('/login',function () { return view('user.login');})->name('login');
+Route::get('/about',function () { return view('about'); })->name('about');
+
+Route::get('/login',function () { return view('user.login'); })->name('login');

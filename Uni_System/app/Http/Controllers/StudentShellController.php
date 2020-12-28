@@ -13,7 +13,7 @@ class StudentShellController extends Controller
     //
     public function index()
     {
-        $student_shells = StudentShell::paginate(15);
+        $student_shells = StudentShell::paginate(10);
         return view('student_shell/index', compact('student_shells'));
     }
     public function my_student_shells()
@@ -38,6 +38,12 @@ class StudentShellController extends Controller
         $student_shell = new StudentShell($request->all());
         $student_shell->user_id = Auth::user()->id;
         $student_shell->total_score = 0;
+        $student_shell->save();
+        return redirect()->action([StudentShellController::class, 'index']);
+    }
+    public function change_score(Request  $request, StudentShell $student_shell)
+    {
+        $student_shell->total_score += abs(intval($request->total_score));
         $student_shell->save();
         return redirect()->action([StudentShellController::class, 'index']);
     }

@@ -18,8 +18,8 @@
                 <th scope="col">Course</th>
                 <th scope="col">lecture</th>
                 <th scope="col">lecturer</th>
-
                 <th scope="col">edit</th>
+                <th scope="col">open</th>
             </tr>
             </thead>
             <tbody>
@@ -29,11 +29,17 @@
                     <td>{{$lecture->course->name}}</td>
                     <td>{{$lecture->name}}</td>
                     <td>{{$lecture->lecturer->name}}</td>
-
                     <td>
                         <button type="button" class="btn btn-info">
                             <a class="text-white" href="{{route('edit.lecture', $lecture->id)}}">
                                 edit
+                            </a>
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-info">
+                            <a class="text-white" href="{{route('open.lecture', $lecture->id)}}">
+                                open
                             </a>
                         </button>
                     </td>

@@ -10,11 +10,11 @@
                     <label for="name">lecture Name</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="name"
                            value="{{old('name', $lecture->name)}}" name="name"/>
-                    <div>
+                    <div class="marg-4">
                         <label for="course_id">Course Name</label>
                         <select name="course_id">
                             @foreach($courses as $course)
-                                @if (old('course_id', $course->course_id) == $course->id))
+                                @if (old('course_id', $lecture->course_id) ==$course->id))
                                 <option value="{{ $course->id }}" selected>{{ $course->name }}</option>
                                 @else
                                     <option value="{{ $course->id }}">{{ $course->name }}</option>
@@ -22,7 +22,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div>
+                    <div class="marg-4">
                         <label for="lecturer_id">lecturer Name</label>
                         <select name="lecturer_id">
                             @foreach($lecturers as $lecturer)

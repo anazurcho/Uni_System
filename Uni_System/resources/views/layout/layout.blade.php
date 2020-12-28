@@ -57,10 +57,6 @@
                     <a class="nav-link text-white" href="{{route('my_courses')}}">My Courses</a>
                     <hr/>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">My Scores</a>
-                    <hr/>
-                </li>
 {{--            @endcan--}}
             @can("admin", Auth::user()->id)
                 <li class="nav-item">
@@ -68,7 +64,7 @@
                     <hr/>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Schedule</a>
+                    <a class="nav-link text-white" href="{{route('all_schedules')}}">Schedule</a>
                     <hr/>
                 </li>
                 <li class="nav-item">

@@ -4,7 +4,7 @@
         @can('admin', Auth::user())
             <div style="margin-bottom:20px; align-items:center;">
                 <button type="button" class="btn btn-info">
-                    <a class=" text-white" href="{{route('create.course')}}">
+                    <a class=" text-white" href="{{route('course.create')}}">
                         add course
                     </a>
                 </button>

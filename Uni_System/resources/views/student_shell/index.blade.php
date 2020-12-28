@@ -18,7 +18,10 @@
                 <th scope="col">course</th>
                 <th scope="col">lecture</th>
                 <th scope="col">lecturer</th>
-                <th scope="col">total score</th>
+                <th scope="col">score</th>
+                @can('lecturer', Auth::user())
+                    <th scope="col" >Change Score</th>
+                @endcan
             </tr>
             </thead>
             <tbody>
@@ -29,6 +32,16 @@
                     <td>{{$student_shell->lecture->name}}</td>
                     <td>{{$student_shell->lecture->lecturer->name}}</td>
                     <td>{{$student_shell->total_score}}</td>
+                    @can('lecturer', Auth::user())
+                        <td>
+                            <form class="form-inline" method="post" enctype="multipart/form-data" action="{{route('change_score.student_shell', $student_shell->id)}}">
+                                @csrf
+                                @method("PUT")
+                                <input class="form-control mr-sm-1  col-md-3" type="text" placeholder="score" name="total_score">
+                                <button class="btn btn-secondary mr-sm-1 col-md-4" type="submit">+ Score</button>
+                            </form>
+                        </td>
+                    @endcan
                 </tr>
             @endforeach
             </tbody>
