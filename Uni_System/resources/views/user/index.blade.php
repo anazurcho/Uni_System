@@ -8,8 +8,9 @@
                 <th scope="col">#</th>
                 <th scope="col">USERNAME</th>
                 <th scope="col">Email</th>
-                <th scope="col">Status</th>
+                <th scope="col">Open</th>
                 @can('admin')
+                <th scope="col">Status</th>
                     <th scope="col">edit</th>
                     <th scope="col">Change Password</th>
                 @endcan
@@ -21,8 +22,15 @@
                     <th scope="row">{{$user->id}}</th>
                     <td>{{$user->name}}</td>
                     <td>{{$user->email}}</td>
-                    <td>{{$user->status}}</td>
+                    <td>
+                        <button type="button" class="btn btn-info">
+                            <a class=" text-white" href="{{route('open.user', $user->id)}}">
+                                see
+                            </a>
+                        </button>
+                    </td>
                     @can('admin')
+                    <td>{{$user->status}}</td>
                         <td>
                             <button type="button" class="btn btn-info">
                                 <a class=" text-white" href="{{route('users.edit', $user->id)}}">

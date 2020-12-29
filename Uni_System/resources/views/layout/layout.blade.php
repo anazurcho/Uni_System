@@ -52,6 +52,10 @@
                 <a class="nav-link text-white" href="{{route('my_courses')}}">My Courses</a>
                 <hr/>
             </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{{route('my_students')}}">My Students</a>
+                <hr/>
+            </li>
             @can("student", Auth::user()->id)
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('my_student_shells')}}">My Student Shells</a>
@@ -71,7 +75,6 @@
                     <a class="nav-link text-white" href="{{route('all_lectures')}}">Lectures</a>
                     <hr/>
                 </li>
-                {{--            if admin show--}}
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('all_users')}}">Users</a>
                     <hr/>
@@ -81,9 +84,8 @@
                     <hr/>
                 </li>
             @endcan
-            {{--            --}}
             <li class="nav-item">
-                <a class="nav-link" href="{{route('about')}}">About</a>
+                <a class="nav-link text-white" href="{{route('about')}}">About</a>
                 <hr/>
             </li>
         </ul>

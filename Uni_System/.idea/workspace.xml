@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61222e93-f3e0-4d1b-b7c9-8b2c014437a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/user/user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentShellController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentShellController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/course/my_courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/my_courses.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/lecture/lecture.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/lecture.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lecture/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -179,7 +177,7 @@
       <workItem from="1608997637791" duration="8866000" />
       <workItem from="1609035801039" duration="1916000" />
       <workItem from="1609076224859" duration="1001000" />
-      <workItem from="1609079135868" duration="51425000" />
+      <workItem from="1609079135868" duration="57897000" />
     </task>
     <servers />
   </component>
@@ -231,9 +229,9 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="622" y="239" key="run.anything.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609186440801" />
-    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1608835914930">
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1609200773839">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
-    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1608835914930" />
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609200773839" />
   </component>
 </project>

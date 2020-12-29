@@ -28,7 +28,6 @@
                     <th scope="row">{{$lecture->id}}</th>
                     <td>{{$lecture->course->name}}</td>
                     <td>{{$lecture->name}}</td>
-{{--                    <td>{{$lecture->lecturer->name}}</td>--}}
                     <td>{{$lecture->name}}</td>
                     <td>
                         <button type="button" class="btn btn-info">
@@ -44,8 +43,6 @@
                             </a>
                         </button>
                     </td>
-                    {{--                    <td>{{$lecture->email}}</td>--}}
-                    {{--                    <td>{{$lecture->status}}</td>--}}
                 </tr>
             @endforeach
             </tbody>

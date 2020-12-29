@@ -32,6 +32,7 @@ Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/post-register', [UserController::class, 'postRegister'])->name('post_register');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
+Route::get('/my_students', [UserController::class, 'my_students'])->name('my_students')->middleware('auth');
 Route::get('/users', [UserController::class, 'index'])->name('all_users')->middleware('auth');
 Route::get('/users/my_profile', [UserController::class, 'my_profile'])->name('my_profile')->middleware('auth');
 Route::get('/users/{user}', [UserController::class, 'open'])->name('open.user')->middleware('auth');
