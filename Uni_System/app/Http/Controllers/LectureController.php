@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Lecture;
+use App\Models\StudentShell;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LectureController extends Controller
 {
-    //
     public function index()
     {
         $lectures = Lecture::paginate(10);
@@ -36,7 +37,9 @@ class LectureController extends Controller
     }
     public function open(Lecture $lecture)
     {
-        return view("lecture/lecture", compact('lecture'));
+        $my_score = StudentShell::where(['lecture_id' => $lecture->id, 'user_id' => Auth::user()->id])->first();
+        $student_shells = $lecture->student_shell()->paginate(5);
+        return view("lecture/lecture", compact('lecture', 'student_shells', 'my_score'));
     }
     public function update(Request $request, Lecture $lecture)
     {

@@ -53,6 +53,7 @@
                         <th scope="col">course</th>
                         <th scope="col">lecture</th>
                         <th scope="col">Score</th>
+                        <th scope="col">Open</th>
                     </tr>
                     <tbody>
                     @foreach($student_shells as $course)
@@ -63,6 +64,13 @@
                             <td>{{$course->lecture->course->name}}</td>
                             <td>{{$course->lecture->name}}</td>
                             <td>{{$course->total_score}}</td>
+                            <td>
+                                <button type="button" class="btn btn-info">
+                                    <a class="text-white" href="{{route('open.lecture', $course->lecture->id)}}">
+                                        open
+                                    </a>
+                                </button>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

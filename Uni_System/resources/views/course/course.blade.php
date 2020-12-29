@@ -20,7 +20,7 @@
                             <th scope="row">{{$lecture->id}}</th>
                             <td>{{$lecture->course->name}}</td>
                             <td>{{$lecture->name}}</td>
-                            <td>{{$lecture->lecturer->name}}</td>
+                            <td>{{$lecture->user->name}}</td>
                         </tr>
                     @endforeach
                     </tbody>

@@ -27,6 +27,7 @@ Route::get('/',
         return view('user.login');
         }
     })->name('welcome');
+Route::get('/login',function () { return view('user.login'); })->name('login');
 Route::post('/post-login', [UserController::class, 'postLogin'])->name('post_login');
 Route::get('/register', [UserController::class, 'register'])->name('register');
 Route::post('/post-register', [UserController::class, 'postRegister'])->name('post_register');
@@ -70,5 +71,3 @@ Route::get('/schedules/create', [ScheduleController::class, 'create'])->name('cr
 Route::post('/schedules/save', [ScheduleController::class, 'save'])->name('save.schedule')->middleware('auth');
 
 Route::get('/about',function () { return view('about'); })->name('about');
-
-Route::get('/login',function () { return view('user.login'); })->name('login');

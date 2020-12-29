@@ -61,12 +61,12 @@
                     <a class="nav-link text-white" href="{{route('my_student_shells')}}">My Student Shells</a>
                     <hr/>
                 </li>
-            @endcan
-            @can("admin", Auth::user()->id)
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('all_courses')}}">Courses</a>
                     <hr/>
                 </li>
+            @endcan
+            @can("admin", Auth::user()->id)
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('all_schedules')}}">Schedule</a>
                     <hr/>

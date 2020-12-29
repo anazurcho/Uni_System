@@ -4,10 +4,13 @@
     <list default="true" id="61222e93-f3e0-4d1b-b7c9-8b2c014437a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LectureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LectureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/course.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/course.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/course/my_courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/course/my_courses.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/lecture/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lecture/lecture.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/lecture.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
