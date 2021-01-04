@@ -17,8 +17,10 @@
                 <th scope="col">#</th>
                 <th scope="col">Course</th>
                 <th scope="col">see more</th>
-                <th scope="col">edit</th>
-                <th scope="col">delete</th>
+                @can('admin')
+                    <th scope="col">edit</th>
+                    <th scope="col">delete</th>
+                @endcan
             </tr>
             </thead>
             <tbody>
@@ -33,24 +35,26 @@
                             </a>
                         </button>
                     </td>
-                    <td>
-                        <button type="button" class="btn btn-info">
-                            <a class="text-white" href="{{route('edit.course', $course->id)}}">
-                                edit
-                            </a>
-                        </button>
-                    </td>
-                    <td>
-                        <form method="post" action="{{route('delete.course', $course->id)}}">
-                            @csrf
-                            @method("DELETE")
-                            <button type="submit" class="btn btn-info">
+                    @can('admin')
+                        <td>
+                            <button type="button" class="btn btn-info">
+                                <a class="text-white" href="{{route('edit.course', $course->id)}}">
+                                    edit
+                                </a>
+                            </button>
+                        </td>
+                        <td>
+                            <form method="post" action="{{route('delete.course', $course->id)}}">
+                                @csrf
+                                @method("DELETE")
+                                <button type="submit" class="btn btn-info">
                                     <span class="text-white">
                                         delete
                                     </span>
-                            </button>
-                        </form>
-                    </td>
+                                </button>
+                            </form>
+                        </td>
+                    @endcan
 
                 </tr>
             @endforeach

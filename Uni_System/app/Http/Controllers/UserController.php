@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Lecture;
+use App\Http\Requests\user_requests\LoginRequest;
+use App\Http\Requests\user_requests\RegisterRequest;
+use App\Http\Requests\user_requests\PasswordRequest;
+use App\Http\Requests\user_requests\UpdateUserRequest;
 use App\Models\StudentShell;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -16,7 +18,7 @@ class UserController extends Controller
         return view('user.login');
     }
 
-    public function postLogin(Request $request)
+    public function postLogin(LoginRequest $request)
     {
         $credentials = $request->except(('_token'));
         if (Auth::attempt($credentials)) {
@@ -37,7 +39,7 @@ class UserController extends Controller
     {
         return view('user.register');
     }
-    public function postRegister(Request $request)
+    public function postRegister(RegisterRequest $request)
     {
         $user = new User($request->all());
         $user->status = 'student';
@@ -66,7 +68,7 @@ class UserController extends Controller
     {
         return view("user/edit", compact('user'));
     }
-    public function update(Request $request, User $user)
+    public function update(UpdateUserRequest $request, User $user)
     {
 //        $user->update($request->all());
         $user->name = $request->name;
@@ -84,10 +86,9 @@ class UserController extends Controller
     {
         return view("user/change_password", compact('user'));
     }
-    public function password_update(Request $request, User $user)
+    public function password_update(PasswordRequest $request, User $user)
     {
         $user->password = bcrypt($request->input('password'));
-//        $user->push();
         $user->save();
         return redirect()->route('my_profile');
     }
