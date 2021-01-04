@@ -59,6 +59,7 @@ class UserController extends Controller
     }
     public function my_students()
     {
+        $this->authorize('lecturer');
         $lectures = Auth::user()->lecturer()->get()->pluck('id')->toArray();
         $student_shells = StudentShell::whereIn('lecture_id', $lectures)->pluck('user_id')->toArray();
         $users = User::whereIn('id', $student_shells)->paginate(10);
