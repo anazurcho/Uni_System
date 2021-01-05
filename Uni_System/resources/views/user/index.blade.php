@@ -1,6 +1,15 @@
 @extends("layout.layout")
 @section("content")
     <div class="container marg-3" align="center">
+        @can('admin')
+            <div style="margin-bottom:20px; align-items:center;">
+                <button type="button" class="btn btn-info">
+                    <a class=" text-white" href="{{route('create.user')}}">
+                        add user
+                    </a>
+                </button>
+            </div>
+        @endcan
         <div style="align-items:center;"> {{ $users->links('vendor.pagination.bootstrap-4') }} </div>
         <table class="table">
             <thead class="thead-dark">

@@ -8,6 +8,7 @@ use App\Http\Requests\user_requests\PasswordRequest;
 use App\Http\Requests\user_requests\UpdateUserRequest;
 use App\Models\StudentShell;
 use App\Models\User;
+use http\Client\Request;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -45,7 +46,8 @@ class UserController extends Controller
         $user->status = 'student';
         $user->password = bcrypt($request->input('password'));
         $user->save();
-        return $this->postLogin($request);
+        return view('user.login');
+//        return $this->postLogin($request);
     }
     public function logout()
     {
@@ -92,5 +94,16 @@ class UserController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->save();
         return redirect()->route('my_profile');
+    }
+    public function user_create()
+    {
+        return view('user.create');
+    }
+    public function user_save(RegisterRequest $request)
+    {
+        $user = new User($request->all());
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
+        return redirect()->route('all_users');
     }
 }

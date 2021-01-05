@@ -44,13 +44,13 @@ Route::middleware(['edit.password'])->group(function () {
 
 });
 
-
-
 Route::middleware(['auth'])->group(function () {
     Route::get('/my_students', [UserController::class, 'my_students'])->name('my_students');
     Route::get('/users', [UserController::class, 'index'])->name('all_users');
     Route::get('/users/my_profile', [UserController::class, 'my_profile'])->name('my_profile');
     Route::get('/users/{user}', [UserController::class, 'open'])->name('open.user');
+    Route::get('/users/create_user', [UserController::class, 'user_create'])->name('create.user');
+    Route::post('/users/save_user', [UserController::class, 'user_save'])->name('save.user');
 
 
     Route::get('/lectures', [LectureController::class, 'index'])->name('all_lectures');

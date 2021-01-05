@@ -30,11 +30,19 @@
             @foreach($student_shells as $student_shell)
                 <tr>
                     @can('lecturer')
-                        <td>{{$student_shell->user->name}}</td>
+                        @if($student_shell->user)
+                            <td>{{$student_shell->user->name}}</td>
+                        @else
+                            <td>Not indicated</td>
+                        @endif
                     @endcan
                     <td>{{$student_shell->lecture->course->name}}</td>
                     <td>{{$student_shell->lecture->name}}</td>
-                    <td>{{$student_shell->lecture->user->name}}</td>
+                        @if($student_shell->lecture->user)
+                            <td>{{$student_shell->lecture->user->name}}</td>
+                        @else
+                            <td>Not indicated</td>
+                        @endif
                     <td>{{$student_shell->total_score}}</td>
                     @can('lecturer', Auth::user())
                         <td>

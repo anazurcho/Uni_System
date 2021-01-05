@@ -4,8 +4,12 @@
     <list default="true" id="61222e93-f3e0-4d1b-b7c9-8b2c014437a9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/user_requests/RegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/user_requests/RegisterRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/user_requests/UpdateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/user_requests/UpdateUserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lecture/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lecture/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student_shell/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +183,8 @@
       <workItem from="1609244166924" duration="4824000" />
       <workItem from="1609596898163" duration="457000" />
       <workItem from="1609717254610" duration="2585000" />
+      <workItem from="1609872789623" duration="1241000" />
+      <workItem from="1609874149982" duration="2634000" />
     </task>
     <servers />
   </component>
@@ -210,11 +216,11 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="693" y="283" width="528" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609183353223" />
-    <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl" timestamp="1609249483571">
+    <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl" timestamp="1609873018129">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609077480218" />
-    <state x="743" y="283" key="FileChooserDialogImpl/0.0.1920.1048@0.0.1920.1048" timestamp="1609249483571" />
+    <state x="743" y="283" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1048@0.0.1920.1048" timestamp="1609873018129" />
     <state x="609" y="147" width="696" height="755" key="VCS.ChangeListViewerDialog" timestamp="1609180430397">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
@@ -227,10 +233,11 @@
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="543" y="183" width="828" height="684" key="com.intellij.database.dbimport.ImportDialog/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609084824585" />
-    <state x="644" y="213" width="631" height="624" key="find.popup" timestamp="1609183548653">
+    <state x="644" y="213" width="631" height="624" key="find.popup" timestamp="1609874660232">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>
     <state x="644" y="213" width="631" height="624" key="find.popup/0.0.1920.1048/1920.0.1920.1080@0.0.1920.1048" timestamp="1609183548653" />
+    <state x="644" y="213" width="631" height="624" key="find.popup/0.0.1920.1048@0.0.1920.1048" timestamp="1609874660232" />
     <state x="665" y="290" width="584" height="470" key="refactoring.ChangeSignatureDialog" timestamp="1609083493395">
       <screen x="0" y="0" width="1920" height="1048" />
     </state>

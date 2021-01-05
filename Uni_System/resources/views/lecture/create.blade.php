@@ -1,6 +1,5 @@
 @extends("layout.layout")
 @section("content")
-    <body>
     <div class="container marg-3">
         <form method="post" enctype="multipart/form-data" action="{{route('save.lecture')}}">
             <div class="box-body">
@@ -32,5 +31,4 @@
             </div>
         </form>
     </div>
-    </body>
 @endsection
